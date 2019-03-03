@@ -5,6 +5,11 @@ class Huaji(object):
     def __init__(self, radius):
         self.radius = radius  # 初始化半径，控制图像大小
 
+    def drawingset(self):
+        tt.screensize(800, 600, "#f0f0f0")  # 画布设置
+        tt.pensize(2)  # 画笔宽度
+        tt.speed(9)  # 画笔速度
+
     def my_goto(self, x, y):
         tt.penup()
         tt.goto(x, y)
@@ -41,11 +46,11 @@ class Huaji(object):
         tt.pencolor('black')
         if kind == 'left':
             self.my_goto(-60, 70)
-            tt.left(45)  # 左转75°
+            tt.left(45)  # 左转45°
             tt.circle(self.radius - 100, 60)
         elif kind == 'right':
             self.my_goto(100, 90)  # 高度有待商榷
-            tt.left(-30)  # 左转75°
+            tt.left(-30)  # 左转-30°
             tt.circle(self.radius - 100, 60)
 
     def eyes(self):
@@ -55,6 +60,9 @@ class Huaji(object):
         """
         # 左眼
         self.my_goto(-40, 30)
+        tt.fillcolor('white')
+        tt.begin_fill()
+
         tt.left(-90)
         tt.circle(self.radius - 90, 100)  # 100°的圆弧
         tt.right(-30)
@@ -65,6 +73,8 @@ class Huaji(object):
         tt.right(-128)
         tt.circle(self.radius - 105, 50)
 
+        tt.end_fill()
+        # 瞳孔
         self.my_goto(-100, 30)
         tt.fillcolor('black')
         tt.begin_fill()
@@ -73,6 +83,8 @@ class Huaji(object):
 
         # 右眼
         self.my_goto(120, 30)  # 起始位置是关键
+        tt.fillcolor('white')
+        tt.begin_fill()
         # tt.left(-90)
         tt.circle(self.radius - 90, 100)  # 100°的圆弧
         tt.right(-30)
@@ -82,8 +94,9 @@ class Huaji(object):
         tt.circle(-(self.radius - 90), 100)
         tt.right(-128)
         tt.circle(self.radius - 105, 50)
-
-        self.my_goto(60, 40)
+        tt.end_fill()
+        # 瞳孔
+        self.my_goto(60, 45)
         tt.fillcolor('black')
         tt.begin_fill()
         tt.circle(self.radius - 140)
@@ -91,16 +104,14 @@ class Huaji(object):
 
 
 if __name__ == '__main__':
-    tt.screensize(800, 600, "#f0f0f0")  # 画布设置
-    tt.pensize(2)  # 画笔宽度
-    tt.speed(9)    # 画笔速度
     huaji = Huaji(radius=150)   # 图像大小设置
-    huaji.my_goto(0, -200)
-    huaji.face()   # 脸
+    huaji.drawingset()          # 画布设置
+    huaji.my_goto(0, -200)      # 起始点
+    huaji.face()                # 脸
     huaji.my_goto(-100, -80)
-    huaji.mouth()  # 嘴巴
-    huaji.eyebrow('left')  # 左眉毛
-    huaji.eyebrow('right')  # 右眉毛
-    huaji.eyes()
+    huaji.mouth()               # 嘴巴
+    huaji.eyebrow('left')       # 左眉毛
+    huaji.eyebrow('right')      # 右眉毛
+    huaji.eyes()                # 眼睛
 
-    tt.exitonclick()
+    tt.exitonclick()  # 鼠标单击即停止
