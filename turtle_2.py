@@ -6,14 +6,24 @@ class Huaji(object):
         self.radius = radius  # 初始化半径，控制图像大小
 
     def drawingset(self):
+        """
+        Canvas setting
+        :return: None
+        """
         tt.screensize(800, 600, "#f0f0f0")  # 画布设置
         tt.pensize(2)  # 画笔宽度
         tt.speed(9)  # 画笔速度
 
     def my_goto(self, x, y):
-        tt.penup()
-        tt.goto(x, y)
-        tt.pendown()
+        """
+        determine the position of the turtle
+        param x: x position
+        param y: y position
+        return: None
+        """
+        tt.penup()  # start
+        tt.goto(x, y)  # jump
+        tt.pendown()  # end
 
     def face(self):
         """
@@ -96,7 +106,7 @@ class Huaji(object):
         tt.circle(self.radius - 105, 50)
         tt.end_fill()
         # 瞳孔
-        self.my_goto(60, 45)
+        self.my_goto(60, 42)
         tt.fillcolor('black')
         tt.begin_fill()
         tt.circle(self.radius - 140)
