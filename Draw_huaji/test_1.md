@@ -48,7 +48,7 @@ if kind == 'left':
 
 ## 3. 运行结果
 <img src="https://img-blog.csdnimg.cn/20190309002540104.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hvbGx5UmFu,size_16,color_FFFFFF,t_70" width = "200" height = "200" div align=center />  
-&emsp;&emsp;差距稍微有点大吼~但是好歹神似，再改进吧。  
+&emsp;&emsp;差距稍微有点大吼~但是好歹神似，再改进吧。    
 &emsp;&emsp;**代码及说明文档已上传到Github:** <https://github.com/Jadenmiao/Elective-Courses>  
 ## 4. 参考资料  
 (1) 教学课件    
