@@ -17,7 +17,7 @@
 
 &emsp;&emsp;通过分析发现，该图片主要由基本的圆组成，脸、眼睛、嘴巴以及眉毛不是圆就  
 是圆弧，最多填充颜色，所以实现起来较为简单。  
-&emsp;&emsp;在turtle中，不管是pencolor还是fillcolor都需要颜色（实际上并不推荐直接使用  RGB颜色，即颜色的英文名），推荐使用 [**颜色代码**](https://www.114la.com/other/rgb.htm"颜色代码对照表")。  
+&emsp;&emsp;在turtle中，不管是pencolor还是fillcolor都需要颜色（实际上并不推荐直接使用  RGB颜色，即颜色的英文名），推荐使用 [**颜色代码**](https://www.114la.com/other/rgb.htm)。  
 &emsp;&emsp;将滑稽图片分成脸、嘴巴、眉毛还有眼睛四部分，其中瞳孔包含在眼睛里。  
 &emsp;&emsp;实现方法也很简单，先建立一张画布，然后依次画出目标表情的各个部分，最后统筹到一起即可。  
 &emsp;&emsp;下面是各个函数功能的讲解。
@@ -50,6 +50,7 @@ if kind == 'left':
 <img src="https://img-blog.csdnimg.cn/20190309002540104.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hvbGx5UmFu,size_16,color_FFFFFF,t_70" width = "200" height = "200" div align=center />  
 &emsp;&emsp;差距稍微有点大吼~但是好歹神似，再改进吧。  
 &emsp;&emsp;**代码及说明文档已上传到Github:** <https://github.com/Jadenmiao/Elective-Courses>  
+
 ## 4. 参考资料   
 (1) 教学课件    
 (2) 用turtle绘制哆啦A梦：  
