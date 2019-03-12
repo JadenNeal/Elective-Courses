@@ -22,7 +22,7 @@
 &emsp;&emsp;实现方法也很简单，先建立一张画布，然后依次画出目标表情的各个部分，最后统筹到一起即可。  
 &emsp;&emsp;下面是各个函数功能的讲解。
 ### (1) __init__()
-&emsp;&emsp;图片大小设置，考虑到表情为原型，故控制参数为radius（半径）。
+&emsp;&emsp;图片大小设置，考虑到表情为圆形，故控制参数为radius（半径）。
 ### (2) drawingset()
 &emsp;&emsp;顾名思义，画布的设置，本例中，画布设置为800x600像素大小。
 ### (3) my_goto()
@@ -44,12 +44,14 @@ elif kind == 'right':
     tt.circle(self.radius - 100, 60)
 ```
 ### (7) eyes()
-&emsp;&emsp;眼睛及部分，这里眼眶近似为双曲线，眼睛则为原型。分别填充白色和黑色。
+&emsp;&emsp;眼睛部分，这里眼眶近似为双曲线，眼睛则为原型。分别填充白色和黑色。
 
 ## 3. 运行结果
 <img src="https://img-blog.csdnimg.cn/20190309002540104.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hvbGx5UmFu,size_16,color_FFFFFF,t_70" width = "200" height = "200" div align=center />  
 &emsp;&emsp;差距稍微有点大吼~但是好歹神似，再改进吧。  
-&emsp;&emsp;**代码及说明文档已上传到Github：**<https://github.com/Jadenmiao/Elective-Courses>
+
+&emsp;&emsp;**代码及说明文档已上传到Github：**<https://github.com/Jadenmiao/Elective-Courses>  
+
 ## 4. 参考资料
 (1) 教学课件  
 (2) 用turtle绘制哆啦A梦：  
