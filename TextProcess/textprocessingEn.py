@@ -12,6 +12,9 @@ file_name_list = os.listdir(filepath)
 
 
 class Mytext:
+    """
+    a class for text processing
+    """
     def __init__(self):
         pass
 
@@ -96,6 +99,11 @@ class Mytext:
             plt.show()                         # Display the result
 
     def daw_cloud(self, filename):
+        """
+        the cloud picture drew by wordcloud
+        :param filename: name of file
+        :return: None
+        """
         with open(filename, 'rb') as f:
             data = f.read().decode('gbk')
             patt = re.compile(r"[\"'](.*?)[\"']")
