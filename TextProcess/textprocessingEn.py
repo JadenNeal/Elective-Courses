@@ -1,6 +1,7 @@
 import re
 import os
 import matplotlib.pyplot as plt
+from wordcloud import WordCloud, STOPWORDS
 
 # TODO(Jaden): read the data from a folder
 # Then store the data in a list named "file_name_list"
@@ -12,9 +13,6 @@ file_name_list = os.listdir(filepath)
 
 class Mytext:
     def __init__(self):
-        """
-        还没想好怎么写
-        """
         pass
 
     def read_file(self, filelist):
@@ -78,7 +76,7 @@ class Mytext:
             for j in name_set:
                 f3.write(j + "\n")                           # the 3rd is done
 
-    def draw(self, filename, mode="rb"):
+    def draw_chart(self, filename, mode="rb"):
         """
         Draw the result by using matplotlib.pyplot
         :param filename: A file name
@@ -97,6 +95,29 @@ class Mytext:
 
             plt.show()                         # Display the result
 
+    def daw_cloud(self, filename):
+        with open(filename, 'rb') as f:
+            data = f.read().decode('gbk')
+            patt = re.compile(r"[\"'](.*?)[\"']")
+            result = patt.findall(data)               # class list
+            # print(result)                           # for debugging
+            background_img = plt.imread('pika.jpg')
+            wc = WordCloud(
+                background_color='white',
+                mask=background_img,
+                max_words=2000,
+                stopwords=STOPWORDS,
+                max_font_size=50,
+                random_state=30
+            )
+            wc.generate(str(result))
+            # image_colors = ImageColorGenerator(background_img)
+            # wc.recolor(image_colors)
+            plt.imshow(wc)
+            plt.axis('off')
+
+            plt.show()
+
 
 if __name__ == "__main__":
     text = Mytext()
@@ -108,4 +129,5 @@ if __name__ == "__main__":
     # text.zipf_law(content)
     # text.num_name(content)
     # text.draw(num_name_file_1)
-    text.draw(num_name_file_2)
+    text.draw_chart(num_name_file_2)
+    text.daw_cloud(num_name_file_2)
