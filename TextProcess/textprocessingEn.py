@@ -34,7 +34,7 @@ class Mytext:
         """
         A function for processing the txt file
         :param file_name: the name of a file
-        :return: None
+        :return: content of a txt file
         """
         ######################################
         # TODO: count the current file.      #
