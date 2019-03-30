@@ -136,6 +136,6 @@ if __name__ == "__main__":
     # text.num_letter(content)
     # text.zipf_law(content)
     # text.num_name(content)
-    # text.draw(num_name_file_1)
+    # text.draw_chart(num_name_file_1)
     text.draw_chart(num_name_file_2)
     text.daw_cloud(num_name_file_2)
