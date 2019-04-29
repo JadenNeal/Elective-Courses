@@ -1,6 +1,5 @@
 .idea
 venv
 crawler/2015012516010700.jpg
-crawler/传播智客.pdf
-crawler/传播智客
-gameOf2048
+./crawler/传播智客
+./gameOf2048
