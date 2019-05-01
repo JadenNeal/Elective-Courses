@@ -17,6 +17,7 @@ for ul in img_ul:
     # print(imgs)
     for img in imgs:
         url = img['data-original']
+        # print(url)
         img_name = url.split('/')[-1]
         req = requests.get(main_url+url, stream=True)
         with open('./传播智客/%s' % img_name, 'wb') as f:
