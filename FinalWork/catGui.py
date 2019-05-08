@@ -52,7 +52,7 @@ class CatIdentification(QWidget):
         self.grid.addWidget(self.decButton, 1, 2)
         self.grid.addWidget(self.resLabel, 2, 2)
         self.grid.addWidget(self.closeButton, 3, 2)
-        self.grid.addWidget(self.aboutButton, 3, 0)  # 暂时就先这个布局吧
+        self.grid.addWidget(self.aboutButton, 3, 0)  # 布局管理
         vbox.addLayout(self.grid)
 
         self.setLayout(vbox)
