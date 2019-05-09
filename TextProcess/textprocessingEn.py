@@ -3,7 +3,6 @@ import os
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
 
-# TODO(Jaden): read the data from a folder
 # Then store the data in a list named "file_name_list"
 filepath = r"./Harry Potter Env/"
 file_name_list = os.listdir(filepath)
@@ -37,7 +36,6 @@ class Mytext:
         :return: content of a txt file
         """
         ######################################
-        # TODO: count the current file.      #
         # 1. number of letter                #
         # 2. number of string                #
         # 3. number of character name        #
