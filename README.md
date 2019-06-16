@@ -1,4 +1,2 @@
-# Elective-Courses
-大学python基础选修课  
-
-存放一些平常的作业、练习等
+# Optional Course
+It's a python basic optinal course at university,which includes homework and exercises
